@@ -1,0 +1,51 @@
+﻿<SOUI name="mainWindow" title="@string/title" bigIcon="ICON_LOGO:32" smallIcon="ICON_LOGO:16" margin="5,5,5,5"  resizable="1" wndType="appMain"
+appWnd="1"
+translucent="1" 
+>
+  <root skin="_skin.sys.wnd.bkgnd" cache="1"  width="900" height="600" >
+    <caption pos="0,0,-0,30" show="1" font="adding:0" colorBkgnd="#1C81D1">
+      <icon pos="10,8" src="ICON_LOGO:16"/>
+      <text pos="29,9">@string/title</text>
+      <imgbtn name="btn_close" skin="_skin.sys.btn.close"    pos="-45,0" tip="close" animate="1"/>
+      <imgbtn name="btn_max" skin="_skin.sys.btn.maximize"  pos="-83,0" animate="1" />
+      <imgbtn name="btn_restore" skin="_skin.sys.btn.restore"  pos="-83,0" show="0" animate="1" />
+      <imgbtn name="btn_min" skin="_skin.sys.btn.minimize" pos="-121,0" animate="1" />
+    </caption>
+    <window pos="0,[0,-0,-0">
+      <tabctrl pos="0,0,-0,-0" tabAlign="left" tabSkin="tabctrl_skin" tabInterSize="2" tabWidth="70" tabHeight="30" colorText="#FFFFFF" focusable="0" show="1" curSel="0" colorBkgnd="#808080" animateSteps="5">
+        <page title="折线图" tip="折线图" colorText="#000000">
+          <window pos="5,[2,-5,-5" layout="gridLayout" colorBkgnd="#ffffff" columnCount="2" rowCount="2" xInterval="5" yInterval="5" xGravity="fill" yGravity="fill">
+            <LineChart name="Line1" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" FillRect="0" DataPointCentreColor="#FFFFFF" LineWidth="2" DataPointSize="0" />
+            <LineChart name="Line2" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" DataEnd="0" PullOver="0" DataPointSize="5" AutoScope="0" LowerNumber="0" />
+            <LineChart name="Line3" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" PullOver="1" DataPointSize="0" FillRect="128" />
+            <LineChart name="Line4" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" AxisType="crosswise" PullOver="1" DataEnd="0.5" />
+          </window>
+        </page>
+        <page title="曲线图" tip="曲线图" colorText="#000000">
+          <window pos="5,[2,-5,-5" layout="gridLayout" colorBkgnd="#ffffff" columnCount="2" rowCount="2" xInterval="5" yInterval="5" xGravity="fill" yGravity="fill">
+            <LineChart name="Curve1" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" DataPointSize="0" FillRect="0" DataPointCentreColor="#FFFFFF" LineWidth="2" IsCurve="1" />
+            <LineChart name="Curve2" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" DataEnd="0" FillRect="128" PullOver="0" IsCurve="1" DataPointSize="5" />
+            <LineChart name="Curve3" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" PullOver="1" IsCurve="1" />
+            <LineChart name="Curve4" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" AxisType="crosswise" PullOver="1" IsCurve="1" />
+          </window>
+        </page>
+        <page title="柱状图" tip="柱状图" colorText="#000000">
+          <window pos="5,[2,-5,-5" layout="gridLayout" colorBkgnd="#ffffff" columnCount="2" rowCount="2" xInterval="5" yInterval="5" xGravity="fill" yGravity="fill">
+            <BarChart name="bar1" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" BarWidth="1" BarInterval="0" ShowValue="true" Unit="头" BarTextFont="size:10" />
+            <BarChart name="bar2" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" BarWidth="0.8" Unit="头" BarTextFont="size:10" />
+            <BarChart name="bar3" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" BarWidth="0.8" Unit="头" BarTextFont="size:10" />
+            <BarChart name="bar4" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" AxisType="crosswise" BarWidth="0.8" Unit="头" BarTextFont="size:10" />
+          </window>
+        </page>
+        <page title="饼图" tip="饼图" colorText="#000000">
+          <window pos="5,[2,-5,-5" layout="gridLayout" colorBkgnd="#ffffff" columnCount="2" rowCount="2" xInterval="5" yInterval="5" xGravity="fill" yGravity="fill">
+            <PieChart name="pie1" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" SeriesName="名称" CursorTip="1" />
+            <PieChart name="pie2" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" SeriesName="名称" Decrease="0.5" CursorTip="1" HollowSize="0" TipLineLen="8" TipColor="#ff0000" />
+            <PieChart name="pie3" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" SeriesName="名称" CursorTip="1" HollowSize="0.8" ShowTip="0" ShowHollowText="1" HollowFont="adding:5,bold:1" />
+            <PieChart name="pie4" size="0,0" columnWeight="1" rowWeight="1" colorBkgnd="#aaaaaa" SeriesName="名称" Decrease="0.2" CursorTip="1" HollowSize="0.6" ShowTip="1" ShowHollowText="1" HollowFont="adding:5,bold:1" />
+          </window>
+        </page>
+      </tabctrl>
+    </window>
+  </root>
+</SOUI>
